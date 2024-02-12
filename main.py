@@ -5,6 +5,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+WEIGHT = 68
+HEIGHT = 179.00
+AGE = 28
+
 today = dt.now()
 time = today.time()
 
@@ -18,9 +22,9 @@ track_headers = {
 
 track_params = {
     "query": input("Tell about your exercise: "),
-    "weight_kg": 79,
-    "height_cm": 179.00,
-    "age": 35
+    "weight_kg": WEIGHT,
+    "height_cm": HEIGHT,
+    "age": AGE
 }
 
 track_connect = requests.post(url=track_endpoint, json=track_params, headers=track_headers)
