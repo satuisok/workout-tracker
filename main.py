@@ -5,9 +5,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-WEIGHT = 68
-HEIGHT = 179.00
-AGE = 28
+WEIGHT = int(input("Enter your weight: "))
+HEIGHT = float(input("Enter your height: "))
+AGE = int(input("Enter your age: "))
 
 today = dt.now()
 time = today.time()
